@@ -6,7 +6,13 @@
   <script src="scripts/vue.js"></script>
   <div id="app">
     <h1>{{message}}</h1>
+    <start-button name='start'></start-button>
+    <stop-button name='stop'></stop-button>
+    <reset-button name='reset'></reset-button>
+    <lap-button name='lap'></lap-button>
+    <p>{{ 5 + 5 }}</p>
   </div>
+  <h1 id="timerLabel">00:00:00</h1>
   <script src="scripts/main.js"></script>
 </body>
 </html>
