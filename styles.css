@@ -13,12 +13,12 @@
 }
 
 #app button {
-width: 100px;
-height: 50px;
-background-color: #00758a;
-font-size: 1.5em;
-color: #fff;
-font-weight: 700;
+  width: 100px;
+  height: 50px;
+  background-color: #00758a;
+  font-size: 1.5em;
+  color: #fff;
+  font-weight: 700;
 }
 
 body {
