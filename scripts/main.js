@@ -22,26 +22,26 @@ let app = new Vue({
       this.time = 0;
       this.timeLabel = "00:00:00";
     },
-    timer: function() {
-      var that = this;
-      if(!this.isRunning) {
-        that.intervalId = setInterval(function() {
-          that.time++;
-          var min = Math.floor(that.time/100/60),
-            sec = Math.floor(that.time/100),
-            milliSec = that.time % 100;
+    incrementTimer: function() {
+        this.time++;
+        var min = Math.floor(this.time/100/60),
+          sec = Math.floor(this.time/100),
+          milliSec = this.time % 100;
 
-          if(min < 10) {
-            min = "0" + min;
-          }
-          if(sec >= 60) {
-            sec = sec % 60;
-          }
-          if(sec < 10) {
-            sec = "0" + sec;
-          }
-          that.timeLabel = min + ":" + sec + ":" + milliSec;
-        }, 10);
+        if(min < 10) {
+          min = "0" + min;
+        }
+        if(sec >= 60) {
+          sec = sec % 60;
+        }
+        if(sec < 10) {
+          sec = "0" + sec;
+        }
+        this.timeLabel = min + ":" + sec + ":" + milliSec;
+    },
+    timer: function() {
+      if(!this.isRunning) {
+        this.intervalId = setInterval(this.incrementTimer, 10);
       }
     }
   }
