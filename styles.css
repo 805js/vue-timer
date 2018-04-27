@@ -1,0 +1,26 @@
+#app {
+  width: 400px;
+  border: 2px solid #005a6a;
+  padding: 20px;
+  border-radius: 10px;
+  left: 50%;
+  top: 20%;
+  margin-left: -250px;
+  position: absolute;
+  background-color: #fff;
+  text-align: center;
+  color: #003b46;
+}
+
+#app button {
+width: 100px;
+height: 50px;
+background-color: #00758a;
+font-size: 1.5em;
+color: #fff;
+font-weight: 700;
+}
+
+body {
+  background-color: #00c3e6;
+}
